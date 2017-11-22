@@ -1,4 +1,5 @@
-﻿using RedLock;
+﻿using Dbgo.Core.Configuration;
+using RedLock;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace Dbgo.Core.Caching
     {
 
         #region Fields
-        private readonly NopConfig _config;
+        private readonly DbgoConfig _config;
         private readonly Lazy<string> _connectionString;
 
         private volatile ConnectionMultiplexer _connection;
@@ -22,7 +23,7 @@ namespace Dbgo.Core.Caching
         #endregion
 
 
-        public RedisConnectionWrapper(NopConfig config)
+        public RedisConnectionWrapper(DbgoConfig config)
         {
             this._config = config;
             this._connectionString = new Lazy<string>(GetConnectionString);

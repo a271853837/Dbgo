@@ -1,0 +1,10 @@
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\bin\Debug\Dbgo.Core.dll
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\bin\Debug\Dbgo.Core.pdb
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\bin\Debug\Newtonsoft.Json.dll
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\bin\Debug\RedLock.StrongName.dll
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\bin\Debug\StackExchange.Redis.StrongName.dll
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\bin\Debug\Newtonsoft.Json.xml
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\bin\Debug\StackExchange.Redis.StrongName.xml
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\obj\Debug\Dbgo.Core.csprojResolveAssemblyReference.cache
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\obj\Debug\Dbgo.Core.dll
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Core\obj\Debug\Dbgo.Core.pdb

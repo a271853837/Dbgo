@@ -1,0 +1,5 @@
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Services\bin\Debug\Dbgo.Services.dll
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Services\bin\Debug\Dbgo.Services.pdb
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Services\obj\Debug\Dbgo.Services.csprojResolveAssemblyReference.cache
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Services\obj\Debug\Dbgo.Services.dll
+D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Dbgo.Services\obj\Debug\Dbgo.Services.pdb
