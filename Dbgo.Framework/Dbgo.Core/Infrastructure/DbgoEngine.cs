@@ -5,9 +5,11 @@ using Autofac;
 
 namespace Dbgo.Core.Infrastructure
 {
+    /// <summary>
+    /// 默认引擎
+    /// </summary>
     public class DbgoEngine : IEngine
     {
-
         private static ContainerManager _containerManager;
         public ContainerManager ContainerManager
         {
