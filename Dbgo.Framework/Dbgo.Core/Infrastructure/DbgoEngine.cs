@@ -2,6 +2,9 @@
 using Dbgo.Core.Configuration;
 using Dbgo.Core.Infrastructure.DependencyManagement;
 using Autofac;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Linq;
 
 namespace Dbgo.Core.Infrastructure
 {
@@ -21,10 +24,30 @@ namespace Dbgo.Core.Infrastructure
 
         public void Initialize(DbgoConfig config)
         {
+            RegisterDependencies(config);
+        }
+
+
+        public virtual void RegisterDependencies(DbgoConfig config)
+        {
             var builder = new ContainerBuilder();
+
+            var typeFinder = new WebAppTypeFinder();
+            builder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();
+
+            var drInstances = new List<IDependencyRegistrar>();
+            var drTypes = typeFinder.FindClassesOfType<IDependencyRegistrar>();
+            foreach (var drType in drTypes)
+                drInstances.Add((IDependencyRegistrar)Activator.CreateInstance(drType));
+            //sort
+            drInstances = drInstances.AsQueryable().OrderBy(t => t.Order).ToList();
+            foreach (var dependencyRegistrar in drInstances)
+                dependencyRegistrar.Register(builder);
+
             var container = builder.Build();
             _containerManager = new ContainerManager(container);
         }
+
 
         public object Resolve(Type type)
         {

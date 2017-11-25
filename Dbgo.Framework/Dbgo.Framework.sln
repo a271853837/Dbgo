@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dbgo.Web", "Dbgo.Web\Dbgo.Web.csproj", "{38B2D213-D7EF-49D1-A3BE-455219477451}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dbgo.Web.Framework", "Dbgo.Web.Framework\Dbgo.Web.Framework.csproj", "{AADFD75F-5DF4-4ED5-8BDB-83B1DD13A9B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{38B2D213-D7EF-49D1-A3BE-455219477451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38B2D213-D7EF-49D1-A3BE-455219477451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38B2D213-D7EF-49D1-A3BE-455219477451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADFD75F-5DF4-4ED5-8BDB-83B1DD13A9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADFD75F-5DF4-4ED5-8BDB-83B1DD13A9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADFD75F-5DF4-4ED5-8BDB-83B1DD13A9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADFD75F-5DF4-4ED5-8BDB-83B1DD13A9B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +68,6 @@ Global
 		{FA8649FA-E467-4A27-B41F-05351010AF02} = {B0662099-1C42-4428-84AA-AAAA831C6144}
 		{92E8ACD4-798F-4D90-AA06-5608161E9D6E} = {B0662099-1C42-4428-84AA-AAAA831C6144}
 		{38B2D213-D7EF-49D1-A3BE-455219477451} = {B0DB43ED-649A-4CBC-99A9-01C7F6236DFE}
+		{AADFD75F-5DF4-4ED5-8BDB-83B1DD13A9B2} = {B0DB43ED-649A-4CBC-99A9-01C7F6236DFE}
 	EndGlobalSection
 EndGlobal

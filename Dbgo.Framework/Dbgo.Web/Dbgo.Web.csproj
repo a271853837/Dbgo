@@ -251,6 +251,10 @@
       <Project>{2ee2ee1c-6b34-47d0-a73d-33a35f94cf6d}</Project>
       <Name>Dbgo.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dbgo.Web.Framework\Dbgo.Web.Framework.csproj">
+      <Project>{aadfd75f-5df4-4ed5-8bdb-83b1dd13a9b2}</Project>
+      <Name>Dbgo.Web.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -3,3 +3,8 @@ D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Core.Test\bin\Debug\Core.Test.pd
 D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Core.Test\obj\Debug\Core.Test.csprojResolveAssemblyReference.cache
 D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Core.Test\obj\Debug\Core.Test.dll
 D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\Core.Test\obj\Debug\Core.Test.pdb
+D:\学习\框架\Dbgo\Dbgo.Framework\Core.Test\bin\Debug\Core.Test.dll
+D:\学习\框架\Dbgo\Dbgo.Framework\Core.Test\bin\Debug\Core.Test.pdb
+D:\学习\框架\Dbgo\Dbgo.Framework\Core.Test\obj\Debug\Core.Test.csprojResolveAssemblyReference.cache
+D:\学习\框架\Dbgo\Dbgo.Framework\Core.Test\obj\Debug\Core.Test.dll
+D:\学习\框架\Dbgo\Dbgo.Framework\Core.Test\obj\Debug\Core.Test.pdb

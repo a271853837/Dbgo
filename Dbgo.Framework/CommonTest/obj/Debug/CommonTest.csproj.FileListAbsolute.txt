@@ -4,3 +4,9 @@ D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\CommonTest\bin\Debug\CommonTest.
 D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\CommonTest\obj\Debug\CommonTest.csprojResolveAssemblyReference.cache
 D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\CommonTest\obj\Debug\CommonTest.exe
 D:\大贲工作\GitHub\Dbgo\Dbgo\Dbgo.Framework\CommonTest\obj\Debug\CommonTest.pdb
+D:\学习\框架\Dbgo\Dbgo.Framework\CommonTest\bin\Debug\CommonTest.exe.config
+D:\学习\框架\Dbgo\Dbgo.Framework\CommonTest\bin\Debug\CommonTest.exe
+D:\学习\框架\Dbgo\Dbgo.Framework\CommonTest\bin\Debug\CommonTest.pdb
+D:\学习\框架\Dbgo\Dbgo.Framework\CommonTest\obj\Debug\CommonTest.csprojResolveAssemblyReference.cache
+D:\学习\框架\Dbgo\Dbgo.Framework\CommonTest\obj\Debug\CommonTest.exe
+D:\学习\框架\Dbgo\Dbgo.Framework\CommonTest\obj\Debug\CommonTest.pdb
