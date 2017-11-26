@@ -108,6 +108,7 @@
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Domain\Logging\Log.cs" />
     <Compile Include="Domain\Logging\LogLevel.cs" />
+    <Compile Include="Domain\User.cs" />
     <Compile Include="Infrastructure\AppDomainTypeFinder.cs" />
     <Compile Include="Infrastructure\DbgoEngine.cs" />
     <Compile Include="Infrastructure\DependencyManagement\ContainerManager.cs" />
