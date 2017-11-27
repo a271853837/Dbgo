@@ -18,8 +18,9 @@ namespace Dbgo.Data
             : base(nameOrConnectionString)
         {
             //((IObjectContextAdapter) this).ObjectContext.ContextOptions.LazyLoadingEnabled = true;
-
-            Database.SetInitializer<DbgoObjectContext>(new CreateDatabaseIfNotExists<DbgoObjectContext>());
+            //Database.Initialize(true);
+            //Database.SetInitializer<DbgoObjectContext>(new DropCreateDatabaseAlways<DbgoObjectContext>());
+           
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -28,7 +29,11 @@ namespace Dbgo.Data
             .Where(type => !String.IsNullOrEmpty(type.Namespace))
             .Where(type => type.BaseType != null && type.BaseType.IsGenericType &&
                 type.BaseType.GetGenericTypeDefinition() == typeof(DbgoEntityTypeConfiguration<>));
-
+            foreach (var type in typesToRegister)
+            {
+                dynamic configurationInstance = Activator.CreateInstance(type);
+                modelBuilder.Configurations.Add(configurationInstance);
+            }
             base.OnModelCreating(modelBuilder);
         }
 
