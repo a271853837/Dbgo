@@ -19,8 +19,7 @@ namespace Dbgo.Data
         {
             //((IObjectContextAdapter) this).ObjectContext.ContextOptions.LazyLoadingEnabled = true;
             //Database.Initialize(true);
-            //Database.SetInitializer<DbgoObjectContext>(new DropCreateDatabaseAlways<DbgoObjectContext>());
-           
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DbgoObjectContext>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

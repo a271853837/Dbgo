@@ -54,6 +54,7 @@
     <Compile Include="DbgoObjectContext.cs" />
     <Compile Include="EfDataProviderManager.cs" />
     <Compile Include="EfRepository.cs" />
+    <Compile Include="EfStartUpTask.cs" />
     <Compile Include="IDbContext.cs" />
     <Compile Include="Initializers\CreateTablesIfNotExist.cs" />
     <Compile Include="Mapping\DbgoEntityTypeConfiguration.cs" />

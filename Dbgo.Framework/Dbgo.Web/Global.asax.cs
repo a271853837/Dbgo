@@ -20,6 +20,9 @@ namespace Dbgo.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             EngineContext.Initialize();
+
+            var context = EngineContext.Current.Resolve<IDbContext>();
+            context.SaveChanges();
             //DbgoObjectContext context = new DbgoObjectContext("Dbgo");
         }
     }
