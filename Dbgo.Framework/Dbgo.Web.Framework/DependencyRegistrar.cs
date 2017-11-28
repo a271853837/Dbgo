@@ -20,6 +20,14 @@ namespace Dbgo.Web.Framework
         public void Register(ContainerBuilder builder)
         {
             builder.RegisterGeneric(typeof(EfRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
+            builder.Register(x => new EfDataProviderManager()).As<BaseDataProviderManager>().InstancePerDependency();
+
+            var efDataProviderManager = new EfDataProviderManager();
+            var dataProvider = efDataProviderManager.LoadDataProvider();
+            dataProvider.InitConnectionFactory();
+
+            dataProvider.InitDatabase();
+            dataProvider.SetDatabaseInitializer();
         }
     }
 }
