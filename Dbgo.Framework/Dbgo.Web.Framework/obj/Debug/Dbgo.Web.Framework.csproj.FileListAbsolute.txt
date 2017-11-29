@@ -15,7 +15,6 @@ D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\System.Web.Web
 D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\StackExchange.Redis.StrongName.dll
 D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\RedLock.StrongName.dll
 D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\Newtonsoft.Json.dll
-D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\EntityFramework.dll
 D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\Dbgo.Core.pdb
 D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\Dbgo.Data.pdb
 D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\Autofac.xml
@@ -67,3 +66,4 @@ D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\zh-Hans\
 D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\obj\Debug\Dbgo.Web.Framework.csprojResolveAssemblyReference.cache
 D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\obj\Debug\Dbgo.Web.Framework.dll
 D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\obj\Debug\Dbgo.Web.Framework.pdb
+D:\学习\框架\Dbgo\Dbgo.Framework\Dbgo.Web.Framework\bin\Debug\zh-Hans\EntityFramework.resources.dll

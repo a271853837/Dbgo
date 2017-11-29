@@ -13,7 +13,7 @@ namespace Dbgo.Core.Infrastructure
     /// </summary>
     public class DbgoEngine : IEngine
     {
-        private static ContainerManager _containerManager;
+        private ContainerManager _containerManager;
         public ContainerManager ContainerManager
         {
             get
@@ -25,8 +25,21 @@ namespace Dbgo.Core.Infrastructure
         public void Initialize(DbgoConfig config)
         {
             RegisterDependencies(config);
+            RunStartupTasks();
         }
 
+
+        public virtual void RunStartupTasks()
+        {
+            var typeFinder = _containerManager.Resove<ITypeFinder>();
+            var tasks = typeFinder.FindClassesOfType<IStartupTask>();
+            var startUpTasks = new List<IStartupTask>();
+            foreach (var item in tasks)
+                startUpTasks.Add((IStartupTask)Activator.CreateInstance(item));
+            startUpTasks = startUpTasks.AsQueryable().OrderBy(st => st.Order).ToList();
+            foreach (var item in startUpTasks)
+                item.Excute();
+        }
 
         public virtual void RegisterDependencies(DbgoConfig config)
         {
