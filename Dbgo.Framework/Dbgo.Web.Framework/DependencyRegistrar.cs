@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Autofac;
 using Dbgo.Data;
 using Dbgo.Core.Data;
+using Dbgo.Services.Tasks;
+using Dbgo.Services.Logging;
 
 namespace Dbgo.Web.Framework
 {
@@ -29,9 +31,9 @@ namespace Dbgo.Web.Framework
             builder.Register<IDbContext>(c => new DbgoObjectContext("Dbgo")).InstancePerLifetimeScope();
 
             builder.RegisterGeneric(typeof(EfRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
+            builder.RegisterType<DefaultLogger>().As<ILogger>().InstancePerLifetimeScope();
 
-
-
+            //builder.RegisterType<ScheduleTaskService>().As<IScheduleTaskService>().InstancePerLifetimeScope();
         }
     }
 }

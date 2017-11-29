@@ -20,12 +20,14 @@ namespace Dbgo.Data.Initializers
             }
             if (dbExists)
             {
-                var dbCreationScript = ((IObjectContextAdapter)context).ObjectContext.CreateDatabaseScript();
-                context.SaveChanges();
+                //var dbCreationScript = ((IObjectContextAdapter)context).ObjectContext.CreateDatabaseScript();
+                //context.Database.ExecuteSqlCommand(dbCreationScript);
+                //context.SaveChanges();
             }
             else
             {
-                throw new ApplicationException("No database instance");
+                context.Database.CreateIfNotExists();
+                //throw new ApplicationException("No database instance");
             }
         }
     }

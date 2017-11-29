@@ -257,6 +257,10 @@
       <Project>{1FB32280-448A-42C6-9CA2-8B71B1DEC1AE}</Project>
       <Name>Dbgo.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dbgo.Services\Dbgo.Services.csproj">
+      <Project>{C8B77B82-2B8B-451B-A5CE-40E03346BC07}</Project>
+      <Name>Dbgo.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dbgo.Web.Framework\Dbgo.Web.Framework.csproj">
       <Project>{aadfd75f-5df4-4ed5-8bdb-83b1dd13a9b2}</Project>
       <Name>Dbgo.Web.Framework</Name>

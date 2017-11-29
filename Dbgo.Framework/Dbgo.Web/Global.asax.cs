@@ -1,5 +1,7 @@
 ﻿using Dbgo.Core.Infrastructure;
 using Dbgo.Data;
+using Dbgo.Services.Logging;
+using Dbgo.Services.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +23,13 @@ namespace Dbgo.Web
 
             EngineContext.Initialize();
 
-            var context = EngineContext.Current.Resolve<IDbContext>();
-            context.SaveChanges();
-            //DbgoObjectContext context = new DbgoObjectContext("Dbgo");
+
+            var log = EngineContext.Current.Resolve<ILogger>();
+            //var logs = log.GetAllLogs();
+            log.Information("123");
+
+            //TaskManager.Instance.Initialize();
+            //TaskManager.Instance.Start();
         }
     }
 }

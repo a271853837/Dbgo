@@ -57,7 +57,10 @@
     <Compile Include="EfStartUpTask.cs" />
     <Compile Include="IDbContext.cs" />
     <Compile Include="Initializers\CreateTablesIfNotExist.cs" />
+    <Compile Include="Initializers\SqlCeInitializer.cs" />
     <Compile Include="Mapping\DbgoEntityTypeConfiguration.cs" />
+    <Compile Include="Mapping\Logging\LogMap.cs" />
+    <Compile Include="Mapping\Tasks\ScheduleTaskMap.cs" />
     <Compile Include="Mapping\Users\UserMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerDataProvider.cs" />

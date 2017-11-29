@@ -60,6 +60,6 @@ namespace Dbgo.Core.Domain.Logging
             }
         }
 
-       
+       public virtual User User { get; set; }
     }
 }

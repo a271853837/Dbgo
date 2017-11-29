@@ -45,7 +45,22 @@ namespace Dbgo.Services.Logging
 
         public IPagedList<Log> GetAllLogs(DateTime? fromUtc = default(DateTime?), DateTime? toUtc = default(DateTime?), string message = "", LogLevel? logLevel = default(LogLevel?), int pageIndex = 0, int pageSize = int.MaxValue)
         {
-            throw new NotImplementedException();
+            var query = _logRepository.Table;
+            if (fromUtc.HasValue)
+                query = query.Where(l => fromUtc.Value <= l.CreatedOnUtc);
+            if (toUtc.HasValue)
+                query = query.Where(l => toUtc.Value >= l.CreatedOnUtc);
+            if (logLevel.HasValue)
+            {
+                var logLevelId = (int)logLevel.Value;
+                query = query.Where(l => logLevelId == l.LogLevelId);
+            }
+            if (!String.IsNullOrEmpty(message))
+                query = query.Where(l => l.ShortMessage.Contains(message) || l.FullMessage.Contains(message));
+            query = query.OrderByDescending(l => l.CreatedOnUtc);
+
+            var log = new PagedList<Log>(query, pageIndex, pageSize);
+            return log;
         }
 
         public Log GetLogById(int logId)

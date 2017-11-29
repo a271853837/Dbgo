@@ -297,3 +297,5 @@ D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web\bin\zh-Hans\Microsoft.Owin.S
 D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web\obj\Debug\Dbgo.Web.csprojResolveAssemblyReference.cache
 D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web\obj\Debug\Dbgo.Web.dll
 D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web\obj\Debug\Dbgo.Web.pdb
+D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web\bin\Dbgo.Services.dll
+D:\大贲工作\GitHub\Dbgo\Dbgo.Framework\Dbgo.Web\bin\Dbgo.Services.pdb

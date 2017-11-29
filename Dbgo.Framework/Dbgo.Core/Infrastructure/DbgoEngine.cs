@@ -31,7 +31,7 @@ namespace Dbgo.Core.Infrastructure
 
         public virtual void RunStartupTasks()
         {
-            var typeFinder = _containerManager.Resove<ITypeFinder>();
+            var typeFinder = _containerManager.Resolve<ITypeFinder>();
             var tasks = typeFinder.FindClassesOfType<IStartupTask>();
             var startUpTasks = new List<IStartupTask>();
             foreach (var item in tasks)
@@ -64,12 +64,12 @@ namespace Dbgo.Core.Infrastructure
 
         public object Resolve(Type type)
         {
-            return ContainerManager.Resove(type);
+            return ContainerManager.Resolve(type);
         }
 
         public T Resolve<T>() where T : class
         {
-            return ContainerManager.Resove<T>();
+            return ContainerManager.Resolve<T>();
         }
 
         public T[] ResolveAll<T>()
