@@ -22,14 +22,8 @@ namespace Dbgo.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             EngineContext.Initialize();
-
-
-            var log = EngineContext.Current.Resolve<ILogger>();
-            //var logs = log.GetAllLogs();
-            log.Information("123");
-
-            //TaskManager.Instance.Initialize();
-            //TaskManager.Instance.Start();
+            var logger = EngineContext.Current.Resolve<ILogger>();
+            logger.Information("Application started", null);
         }
     }
 }

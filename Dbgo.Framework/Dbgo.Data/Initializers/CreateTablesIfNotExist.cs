@@ -20,9 +20,19 @@ namespace Dbgo.Data.Initializers
             }
             if (dbExists)
             {
-                //var dbCreationScript = ((IObjectContextAdapter)context).ObjectContext.CreateDatabaseScript();
-                //context.Database.ExecuteSqlCommand(dbCreationScript);
-                //context.SaveChanges();
+                bool createTables;
+                int numberOfTables = 0;
+                foreach (var t1 in context.Database.SqlQuery<int>("SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE table_type = 'BASE TABLE' "))
+                    numberOfTables = t1;
+                createTables = numberOfTables == 0;
+
+                if (createTables)
+                {
+                    var dbCreationScript = ((IObjectContextAdapter)context).ObjectContext.CreateDatabaseScript();
+                    context.Database.ExecuteSqlCommand(dbCreationScript);
+                    //Seed(context);
+                    context.SaveChanges();
+                }
             }
             else
             {
