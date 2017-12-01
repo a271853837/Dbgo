@@ -374,6 +374,9 @@
     <Content Include="Content\js\plugins\gritter\images\ie-spacer.gif" />
     <Content Include="Content\js\plugins\gritter\jquery.gritter.css" />
     <Content Include="Content\js\plugins\gritter\jquery.gritter.min.js" />
+    <Content Include="Content\js\plugins\highcharts\exporting.js" />
+    <Content Include="Content\js\plugins\highcharts\highcharts-zh_CN.js" />
+    <Content Include="Content\js\plugins\highcharts\highcharts.js" />
     <Content Include="Content\js\plugins\iCheck\icheck.min.js" />
     <Content Include="Content\js\plugins\ionRangeSlider\ion.rangeSlider.min.js" />
     <Content Include="Content\js\plugins\jasny\jasny-bootstrap.min.js" />
@@ -451,6 +454,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Html\Index.html" />
+    <Content Include="Html\Index_v1.html" />
     <Content Include="Html\Login.html" />
     <Content Include="Html\Register.html" />
     <Content Include="Scripts\bootstrap.js" />
