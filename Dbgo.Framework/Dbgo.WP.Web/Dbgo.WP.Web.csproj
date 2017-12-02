@@ -337,6 +337,8 @@
     <Content Include="Content\js\plugins\blueimp\jquery.blueimp-gallery.min.js" />
     <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table-mobile.min.js" />
     <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table.min.js" />
+    <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table1.9.js" />
+    <None Include="Content\js\plugins\bootstrap-table\data\baseInfoData.json" />
     <Content Include="Content\js\plugins\bootstrap-table\locale\bootstrap-table-zh-CN.min.js" />
     <Content Include="Content\js\plugins\chartJs\Chart.min.js" />
     <Content Include="Content\js\plugins\chosen\chosen.jquery.js" />
@@ -457,6 +459,8 @@
     <Content Include="Html\Index_v1.html" />
     <Content Include="Html\Login.html" />
     <Content Include="Html\Register.html" />
+    <Content Include="Html\ZZY\BasicDetail.html" />
+    <Content Include="Html\ZZY\BasicInfo.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
