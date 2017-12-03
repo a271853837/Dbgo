@@ -335,6 +335,7 @@
     <Content Include="Content\js\jquery.min.js" />
     <Content Include="Content\js\plugins\beautifyhtml\beautifyhtml.js" />
     <Content Include="Content\js\plugins\blueimp\jquery.blueimp-gallery.min.js" />
+    <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table-export.js" />
     <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table-mobile.min.js" />
     <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table.min.js" />
     <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table1.9.js" />
@@ -354,6 +355,8 @@
     <Content Include="Content\js\plugins\dropzone\dropzone.js" />
     <Content Include="Content\js\plugins\easypiechart\jquery.easypiechart.js" />
     <Content Include="Content\js\plugins\echarts\echarts-all.js" />
+    <Content Include="Content\js\plugins\export\FileSaver.js" />
+    <Content Include="Content\js\plugins\export\jquery.wordexport.js" />
     <Content Include="Content\js\plugins\fancybox\blank.gif" />
     <Content Include="Content\js\plugins\fancybox\fancybox_loading%402x.gif" />
     <Content Include="Content\js\plugins\fancybox\fancybox_loading.gif" />
@@ -531,6 +534,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\js\plugins\layer\theme\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

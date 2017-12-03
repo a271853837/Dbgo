@@ -1,11 +1,134 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+    <meta charset="utf-8" />
+    <script src="../../Content/js/jquery.min.js"></script>
+    <script src="../../Content/js/plugins/export/FileSaver.js"></script>
+    <script src="../../Content/js/plugins/export/jquery.wordexport.js"></script>
+    <style>
+        .no-borders {
+            border: none;
+        }
 
+        .tableborder {
+            border-collapse: collapse;
+        }
+
+            .tableborder tr td {
+                border: 1px solid black;
+                height: 40px;
+            }
+
+        .down-border {
+            border: none;
+            border-bottom: 1px solid #000;
+            width: 100px;
+        }
+
+        .w50 {
+            width: 50px;
+        }
+        .gray{
+            color:darkgray;
+            font-size:14px;
+            margin:3px 0 0 3px;
+        }
+    </style>
+    <script>
+        function Print() {
+            window.print();
+        }
+        function word() {
+            $("#content").wordExport();
+        }
+
+    </script>
+</head>
+<body id="content">
+    <table width="100%" height="100%" class="clear">
+        <tr>
+            <td rowspan="5" style="width:20%"></td>
+            <td style="width:40%" align="center" rowspan="5"><h2>表1-1 种植业县级基本情况调查表</h2></td>
+            <td style="width:40%">
+                表    号：<input type="text" class="no-borders" />
+            </td>
+        </tr>
+        <tr>
+            <td>制表机关：国务院第二次全国污染源普查领导小组办公室</td>
+        </tr>
+        <tr>
+            <td>批准机关：<input type="text" class="no-borders" /></td>
+        </tr>
+        <tr>
+            <td>文    号：<input type="text" class="no-borders" /></td>
+        </tr>
+        <tr>
+            <td>有效期至：<input type="text" class="no-borders" /></td>
+        </tr>
+    </table>
+    <table width="100%" height="100%" style="border:1px solid #000000" class="tableborder">
+        <tr>
+            <td>
+                1.县名称
+            </td>
+            <td colspan="3">
+                <input type="text" class="down-border" />省（区、市）<input type="text" class="down-border" />市（州、盟)<input type="text" class="down-border" />县（区、市、旗）
+            </td>
+            <td>2.行政区划代码</td>
+            <td><input type="text" class="down-border" /></td>
+        </tr>
+        <tr>
+            <td>3.农户总数</td>
+            <td><input type="text" class="down-border" />户</td>
+            <td>4.农村劳动力数量</td>
+            <td><input type="text" class="down-border" />人</td>
+            <td>5.耕地和园地总面积</td>
+            <td><input type="text" class="down-border" />亩</td>
+        </tr>
+        <tr>
+            <td>6.规模种植主体情况</td>
+            <td colspan="5">①数量<input type="text" class="down-border w50" />个 ②面积<input type="text" class="down-border w50" />亩：其中③粮食作物<input type="text" class="down-border w50" />亩  ④经济作物<input type="text" class="down-border w50" />亩  ⑤蔬菜瓜果<input type="text" class="down-border w50" />亩  ⑥园地<input type="text" class="down-border w50" />亩</td>
+        </tr>
+        <tr>
+            <td>7.不同坡度耕地和园地面积</td>
+            <td colspan="5">①平地（坡度≤5°）<input type="text" class="down-border w50" />亩  ②缓坡地<input type="text" class="down-border w50" />（坡度5～15°）              亩  ③陡坡地（坡度＞15°）              亩</td>
+        </tr>
+        <tr>
+            <td>8.耕地面积</td>
+            <td><input type="text" class="down-border" />亩</td>
+            <td>①旱地<input type="text" class="down-border w50" />亩  ②水田<input type="text" class="down-border w50" />亩</td>
+            <td>9.菜地面积</td>
+            <td colspan="2">①露地<input type="text" class="down-border w50" />亩  ②保护地<input type="text" class="down-border w50" />亩</td>
+        </tr>
+        <tr>
+            <td>10.园地面积</td>
+            <td><input type="text" class="down-border" />亩</td>
+            <td colspan="4">	①果园<input type="text" class="down-border w50" />亩  ②茶园<input type="text" class="down-border w50" />亩  ③桑园<input type="text" class="down-border w50" />亩  ④其它<input type="text" class="down-border w50" />亩</td>
+        </tr>
+        <tr>
+            <td>11.果园面积</td>
+            <td colspan="5">①苹果<input type="text" class="down-border w50" />亩  ②梨<input type="text" class="down-border w50" />亩  ③葡萄<input type="text" class="down-border w50" />亩  ④桃<input type="text" class="down-border w50" />亩  ⑤柑桔<input type="text" class="down-border w50" />亩  ⑥香蕉<input type="text" class="down-border w50" />亩  ⑦菠萝<input type="text" class="down-border w50" />亩  ⑧其它果树<input type="text" class="down-border w50" />亩</td>
+        </tr>
+        <tr>
+            <td>12.粮食作物播种面积</td>
+            <td colspan="5">①小麦<input type="text" class="down-border w50" />亩  ②玉米<input type="text" class="down-border w50" />亩  ③水稻<input type="text" class="down-border w50" />亩  ④马铃薯<input type="text" class="down-border w50" />亩  ⑤豆类<input type="text" class="down-border w50" />亩  ⑥其它<input type="text" class="down-border w50" />亩</td>
+        </tr>
+        <tr>
+            <td>13.经济作物播种面积</td>
+            <td colspan="5">①油料作物<input type="text" class="down-border w50" />亩  ②棉麻<input type="text" class="down-border w50" />亩  ③糖料<input type="text" class="down-border w50" />亩  ④烟叶<input type="text" class="down-border w50" />亩</td>
+        </tr>
+        <tr>
+            <td>14.蔬菜瓜果播种面积</td>
+            <td colspan="5">①蔬菜<input type="text" class="down-border w50" />亩  ②瓜果<input type="text" class="down-border w50" />亩</td>
+        </tr>
+    </table>
+    <div class="gray">
+        注：规模种植指一年一熟制地区露地种植农作物的土地达到100亩及以上、一年二熟及以上地区露地种植农作物的土地达到50亩及以上、设施农业的设施占地面积25亩及以上。
+    </div>
+    <div>
+        填表人：<input type="text" class="down-border " />  联系电话：<input type="text" class="down-border " />   审核人：<input type="text" class="down-border " />  联系电话：<input type="text" class="down-border " />    填表日期：<input type="text" class="down-border w50" />年<input type="text" class="down-border w50" />月<input type="text" class="down-border w50" />日
+    </div>
 </body>
 </html>

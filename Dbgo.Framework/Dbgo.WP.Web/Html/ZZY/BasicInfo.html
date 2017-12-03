@@ -9,14 +9,14 @@
     <link href="/Content/css/animate.min.css" rel="stylesheet">
     <link href="../../Content/css/style.min.css" rel="stylesheet" />
     <link href="../../Content/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet" />
 
     <script src="/Content/js/jquery.min.js?v=2.1.4"></script>
-    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Content/js/plugins/bootstrap-table/bootstrap-table1.9.js"></script>
     <script src="/Content/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
     <script src="/Content/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
     <script src="/Content/js/demo/bootstrap-table-demo.min.js"></script>
-
+    <script src="../../Content/js/plugins/bootstrap-table/bootstrap-table-export.js"></script>
     <script src="../../Content/js/plugins/layer/layer.min.js"></script>
     <script>
         $(function () {
@@ -36,26 +36,27 @@
             //初始化Table
             oTableInit.Init = function () {
                 $('#table').bootstrapTable({
-                    url:'../../Content/js/plugins/bootstrap-table/data/baseInfoData.json',
+                    url: '../../Content/js/plugins/bootstrap-table/data/baseInfoData.json',
                     toolbar: '#toolbar',                //工具按钮用哪个容器
                     striped: true,                      //是否显示行间隔色
-                    cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
+                    cache: true,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
                     pagination: true,                   //是否显示分页（*）
                     sortable: false,                     //是否启用排序
                     sortOrder: "asc",                   //排序方式
                     pageNumber: 1,                       //初始化加载第一页，默认第一页
                     pageSize: 10,                       //每页的记录行数（*）
-                    pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+                    pageList: [10],        //可供选择的每页的行数（*）
                     strictSearch: true,
+                    showExport: true,  //是否显示导出按钮
                     showRefresh: true,                  //是否显示刷新按钮
                     minimumCountColumns: 2,             //最少允许的列数
-                    clickToSelect: true,                //是否启用点击选中行
-                    height: 500,                        //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
-                    uniqueId: "ID",                     //每一行的唯一标识，一般为主键列
+                    clickToSelect: false                //是否启用点击选中行
+                    //height: 300,                        //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
+                    //uniqueId: "ID",                     //每一行的唯一标识，一般为主键列
                 });
             };
 
-            
+
             return oTableInit;
         };
 
@@ -72,23 +73,45 @@
         };
 
         function buttonFor(index, row, element) {
-            return "<a href='javascript:;' onclick='detail(" + index + ")'>详情</a>&nbsp;&nbsp;<a href='javascript:;' onclick='editRow(event)'>编辑</a>&nbsp;&nbsp;<a href='javascript:;' onclick='deleteRow(event)'>删除</a>";
+            return "<a href='javascript:;' onclick='detail(" + index + ")'>详情</a>&nbsp;&nbsp;<a href='javascript:;' onclick='detail()'>编辑</a>&nbsp;&nbsp;<a href='javascript:;' onclick='deleteRow(" + index + ")'>删除</a>";
         }
 
         function detail() {
             //iframe层-多媒体
             layer.open({
+                id:'deatil',
                 type: 2,
                 title: false,
-                area: ['630px', '360px'],
+                area: ['1100px', '700px'],
                 shade: 0.2,
-                closeBtn: 1,
                 shadeClose: true,
-                content: ''
+                content: '/Html/ZZY/BasicDetail.html',
+                btn: ['打印', '导出', '关闭'],
+                yes: function (index, layero) {
+                    var frameId = document.getElementById('deatil').getElementsByTagName("iframe")[0].id;
+                    $('#' + frameId)[0].contentWindow.Print();
+                },
+                btn2: function (index, layero) {
+                    var frameId = document.getElementById('deatil').getElementsByTagName("iframe")[0].id;
+                    $('#' + frameId)[0].contentWindow.word();
+                    return false;
+                },
+                btn3: function (index, layero) {
+                }
+            });
+        }
+
+        function deleteRow(index) {
+            layer.confirm('确认删除？', {
+                btn: ['确定', '取消'] //按钮
+            }, function () {
+                layer.closeAll('dialog');
+            }, function () {
+                layer.closeAll('dialog');
             });
         }
     </script>
-    </head>
+</head>
 <body class="gray-bg">
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="ibox float-e-margins">
@@ -105,7 +128,7 @@
                                     <option>2014</option>
                                 </select>
                             </div>
-                            
+
                             <label class="control-label col-sm-1" for="txt_search_departmentname">地区</label>
                             <div class="col-sm-2">
                                 <input type="text" class="form-control" id="txt_search_departmentname">
@@ -135,7 +158,7 @@
                                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
                             </button>
                         </div>
-                        <table id="table" >
+                        <table id="table">
                             <thead>
                                 <tr>
                                     <th data-checkbox="true"></th>
@@ -153,7 +176,7 @@
                                     <th data-align='center' data-halign='center' data-field="price">粮食作物播种</th>
                                     <th data-align='center' data-halign='center' data-field="price">经济作物播种</th>
                                     <th data-align='center' data-halign='center' data-field="price">蔬菜瓜果播种</th>
-                                    <th  data-align='center' data-halign='center' data-formatter="buttonFor">
+                                    <th data-align='center' data-halign='center' data-formatter="buttonFor">
                                         操作
                                     </th>
                                 </tr>
