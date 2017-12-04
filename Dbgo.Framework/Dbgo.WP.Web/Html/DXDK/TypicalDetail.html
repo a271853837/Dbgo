@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="/Content/css/animate.min.css" rel="stylesheet">
+    <link href="../../Content/css/style.min.css" rel="stylesheet" />
+    <link href="../../Content/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="../../Content/js/jquery.min.js"></script>
+    <script src="../../Content/js/bootstrap.min.js"></script>
+    <script src="../../Content/js/plugins/export/FileSaver.js"></script>
+    <script src="../../Content/js/plugins/export/jquery.wordexport.js"></script>
+    <style>
+        .no-borders {
+            border: none;
+        }
+
+        .tableborder {
+            border-collapse: collapse;
+        }
+
+            .tableborder tr td {
+                border: 1px solid black;
+                height: 40px;
+            }
+
+        .down-border {
+            border: none;
+            border-bottom: 1px solid #000;
+            width: 100px;
+        }
+
+        .w50 {
+            width: 50px;
+        }
+
+        .gray {
+            color: darkgray;
+            font-size: 14px;
+            margin: 3px 0 0 3px;
+        }
+    </style>
+    <script>
+        function Print() {
+            window.print();
+        }
+        function word() {
+            $("#content").wordExport();
+        }
+
+    </script>
+</head>
+<body id="content">
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#tab-1" aria-expanded="true"> 典型地块抽样调查表</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#tab-2" aria-expanded="false">肥料施用情况</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#tab-3" aria-expanded="false">农药施用情况</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <table width="100%" height="100%" class="clear">
+                                    <tr>
+                                        <td rowspan="5" style="width:20%"></td>
+                                        <td style="width:45%" align="center" rowspan="5"><h2>种植业典型地块抽样调查表</h2></td>
+                                        <td style="width:35%">
+                                            表    号：<input type="text" class="no-borders" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>制表机关：国务院第二次全国污染源普查领导小组办公室</td>
+                                    </tr>
+                                    <tr>
+                                        <td>批准机关：<input type="text" class="no-borders" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>文    号：<input type="text" class="no-borders" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>有效期至：<input type="text" class="no-borders" /></td>
+                                    </tr>
+                                </table>
+                                <table width="100%" height="100%" style="border:1px solid #000000" class="tableborder">
+                                    <tr>
+                                        <td>
+                                            1.农户户主姓名或规模种植主体
+                                        </td>
+                                        <td>
+                                            <input type="text" class="down-border" />
+                                        </td>
+                                        <td>
+                                            2.联系电话
+                                        </td>
+                                        <td>
+                                            <input type="text" class="down-border" />
+                                        </td>
+                                        <td>3.种植面积</td>
+                                        <td><input type="text" class="down-border w50" />亩</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            4.地址
+                                        </td>
+                                        <td colspan="3">
+                                            <input type="text" class="down-border" />省（区、市）<input type="text" class="down-border" />市（州、盟)<input type="text" class="down-border" />县（区、市、旗）
+                                        </td>
+                                        <td>5.行政区划代码</td>
+                                        <td><input type="text" class="down-border" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.地块编码</td>
+                                        <td><input type="text" class="down-border" />户</td>
+                                        <td>7.典型地块面积</td>
+                                        <td><input type="text" class="down-border" />人</td>
+                                        <td>8.地块坐标</td>
+                                        <td>①经度：   <input type="text" class="down-border w50" />；②纬度：<input type="text" class="down-border w50" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.地块种植模式</td>
+                                        <td colspan="3">①数量<input type="text" class="down-border w50" />个 ②面积<input type="text" class="down-border w50" />亩：其中③粮食作物<input type="text" class="down-border w50" />亩  ④经济作物<input type="text" class="down-border w50" />亩  ⑤蔬菜瓜果<input type="text" class="down-border w50" />亩  ⑥园地<input type="text" class="down-border w50" />亩</td>
+                                        <td>10.种植绿肥</td>
+                                        <td>是<input id="checkbox2" type="checkbox">  否<input id="checkbox2" type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11.第1季作物名称</td>
+                                        <td><input type="text" class="down-border w50" /></td>
+                                        <td>12.作物代码</td>
+                                        <td><input type="text" class="down-border w50" /></td>
+                                        <td>13.耕作方式</td>
+                                        <td>①免耕<input id="checkbox2" type="checkbox">  ②少耕<input id="checkbox2" type="checkbox">  ③常规翻耕<input id="checkbox2" type="checkbox"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>14.地膜覆盖量</td>
+                                        <td><input type="text" class="down-border" /> (公斤/亩)</td>
+                                        <td colspan="3">15.灌溉方式</td>
+                                        <td>①漫灌<input id="checkbox2" type="checkbox">  ②沟灌<input id="checkbox2" type="checkbox">  ③畦灌<input id="checkbox2" type="checkbox">  ④喷灌<input id="checkbox2" type="checkbox">  ⑤滴灌<input id="checkbox2" type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>16.经济产量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>17.秸秆产量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>18.秸秆还田量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>19.第2季作物名称</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>20.作物代码</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>21.耕作方式</td>
+                                        <td>①免耕<input id="checkbox2" type="checkbox">  ②少耕<input id="checkbox2" type="checkbox">  ③常规翻耕<input id="checkbox2" type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>22.地膜覆盖量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>23.灌溉方式</td>
+                                        <td colspan="3">①漫灌<input id="checkbox2" type="checkbox">  ②沟灌<input id="checkbox2" type="checkbox">  ③畦灌<input id="checkbox2" type="checkbox">  ④喷灌<input id="checkbox2" type="checkbox">  ⑤滴灌<input id="checkbox2" type="checkbox"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>24.经济产量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>25.秸秆产量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>26.秸秆还田量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27.第3季作物名称</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>28.作物代码</td>
+                                        <td><input type="text" class="down-border" /></td>
+                                        <td>29.耕作方式</td>
+                                        <td>①免耕<input id="checkbox2" type="checkbox">  ②少耕<input id="checkbox2" type="checkbox">  ③常规翻耕<input id="checkbox2" type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>30.地膜覆盖量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>31.灌溉方式</td>
+                                        <td colspan="3">①漫灌<input id="checkbox2" type="checkbox">  ②沟灌<input id="checkbox2" type="checkbox">  ③畦灌<input id="checkbox2" type="checkbox">  ④喷灌<input id="checkbox2" type="checkbox">  ⑤滴灌<input id="checkbox2" type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>32.经济产量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>33.秸秆产量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                        <td>34.秸秆还田量</td>
+                                        <td><input type="text" class="down-border" />(公斤/亩)</td>
+                                    </tr>
+                                </table>
+                                <div style="margin-top:5px;">
+                                    普查员：<input type="text" class="down-border " />  联系电话：<input type="text" class="down-border " />   县级审核员：<input type="text" class="down-border " />  联系电话：<input type="text" class="down-border " />    填表日期：<input type="text" class="down-border w50" />年<input type="text" class="down-border w50" />月<input type="text" class="down-border w50" />日
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="center">
+                                            <h3>种植业典型地块抽样调查表--肥料施用情况</h3>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="100%" height="100%" style="border:1px solid #000000" class="tableborder">
+                                    <tr>
+                                        <td align="center" rowspan="2">
+                                            序号
+                                        </td>
+                                        <td align="center" rowspan="2">
+                                            1.作物名称
+                                        </td>
+                                        <td align="center" rowspan="2">
+                                            2.作物代码
+                                        </td>
+                                        <td align="center" rowspan="2">3.施肥时间（年-月-旬）</td>
+                                        <td align="center">4.施肥类型</td>
+                                        <td align="center" rowspan="2">5.肥料种类</td>
+                                        <td align="center" rowspan="2">6.肥料代码</td>
+                                        <td align="center" rowspan="2">7.施用量(公斤/亩)</td>
+                                        <td align="center" colspan="3">8.养分含量(%)</td>
+                                        <td align="center" rowspan="2">9.施肥方式</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">①基肥②追肥</td>
+                                        <td align="center">&nbsp;N&nbsp;</td>
+                                        <td align="center">P2O5</td>
+                                        <td align="center">K2O</td>
+                                    </tr>
+                                    <tr>
+                                        <td>①</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>②</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>③</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>④</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>⑤</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>⑥</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>⑦</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>⑧</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                                <div class="gray">
+                                    注：施用有机肥时，肥料养分含量（N、P2O5和K2O）均以烘干基计。
+                                </div>
+                                <div style="margin-top:5px;">
+                                    普查员：<input type="text" class="down-border " />  联系电话：<input type="text" class="down-border " />   审核人：<input type="text" class="down-border " />  联系电话：<input type="text" class="down-border " />    填表日期：<input type="text" class="down-border w50" />年<input type="text" class="down-border w50" />月<input type="text" class="down-border w50" />日
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane">
+                            <div class="panel-body">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="center">
+                                            <h3>种植业典型地块抽样调查表--农药施用情况</h3>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="100%" height="100%" style="border:1px solid #000000" class="tableborder">
+                                    <tr>
+                                        <td align="center" rowspan="2">
+                                            序号
+                                        </td>
+                                        <td align="center" rowspan="2">
+                                            1.种植季
+                                        </td>
+                                        <td align="center" rowspan="2">
+                                            2.作物名称
+                                        </td>
+                                        <td align="center" rowspan="2">4.施药目的</td>
+                                        <td align="center" rowspan="2">5.农药名称</td>
+                                        <td align="center" colspan="4">6.有效成分</td>
+                                        <td align="center" rowspan="2">7.施用量(克/亩)</td>
+                                        <td align="center" rowspan="2">8.施药方法</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">序号</td>
+                                        <td align="center">6-1.名称</td>
+                                        <td align="center">6-2.代码</td>
+                                        <td align="center">6-3.含量(%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>①</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>②</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>③</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>④</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>⑤</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>⑥</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>⑦</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>⑧</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                                <div style="margin-top:5px;">
+                                    普查员：<input type="text" class="down-border " />  联系电话：<input type="text" class="down-border " />   审核人：<input type="text" class="down-border " />  联系电话：<input type="text" class="down-border " />    填表日期：<input type="text" class="down-border w50" />年<input type="text" class="down-border w50" />月<input type="text" class="down-border w50" />日
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

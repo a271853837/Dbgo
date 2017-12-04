@@ -36,7 +36,7 @@
             //初始化Table
             oTableInit.Init = function () {
                 $('#table').bootstrapTable({
-                    url: '../../Content/js/plugins/bootstrap-table/data/baseInfoData.json',
+                    url: '../../Content/js/plugins/bootstrap-table/data/typicalInfoData.json',
                     toolbar: '#toolbar',                //工具按钮用哪个容器
                     striped: true,                      //是否显示行间隔色
                     cache: true,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
@@ -81,11 +81,11 @@
             layer.open({
                 id:'deatil',
                 type: 2,
-                title: "种植业县级基本情况调查表",
+                title: "种植业典型地块抽样调查表",
                 area: ['1100px', '700px'],
                 shade: 0.2,
                 shadeClose: true,
-                content: '/Html/ZZY/BasicDetail.html',
+                content: '/Html/DXDK/TypicalDetail.html',
                 btn: ['打印', '导出', '关闭'],
                 yes: function (index, layero) {
                     var frameId = document.getElementById('deatil').getElementsByTagName("iframe")[0].id;
@@ -129,11 +129,11 @@
                                 </select>
                             </div>
 
-                            <label class="control-label col-sm-1" for="txt_search_departmentname">地区</label>
+                            <label class="control-label col-sm-1" for="txt_search_departmentname">姓名</label>
                             <div class="col-sm-2">
                                 <input type="text" class="form-control" id="txt_search_departmentname">
                             </div>
-                            <label class="control-label col-sm-1" for="txt_search_statu">行政编码</label>
+                            <label class="control-label col-sm-1" for="txt_search_statu">电话</label>
                             <div class="col-sm-2">
                                 <input type="text" class="form-control" id="txt_search_statu">
                             </div>
@@ -163,19 +163,15 @@
                                 <tr>
                                     <th data-checkbox="true"></th>
                                     <th data-visible='false' data-align='center' data-halign='center' data-field="id">ID</th>
-                                    <th data-align='center' data-halign='center' data-field="name">地区</th>
-                                    <th data-align='center' data-halign='center' data-field="price">行政区划代码</th>
-                                    <th data-align='center' data-halign='center' data-field="price">农户总数</th>
-                                    <th data-align='center' data-halign='center' data-field="price">农村劳动力数量</th>
-                                    <th data-align='center' data-halign='center' data-field="price">耕地和园地</th>
-                                    <th data-align='center' data-halign='center' data-field="price">规模种植主体情况</th>
-                                    <th data-align='center' data-halign='center' data-field="price">不同坡度耕地和园地</th>
-                                    <th data-align='center' data-halign='center' data-field="price">耕地</th>
-                                    <th data-align='center' data-halign='center' data-field="price">园地</th>
-                                    <th data-align='center' data-halign='center' data-field="price">果园</th>
-                                    <th data-align='center' data-halign='center' data-field="price">粮食作物播种</th>
-                                    <th data-align='center' data-halign='center' data-field="price">经济作物播种</th>
-                                    <th data-align='center' data-halign='center' data-field="price">蔬菜瓜果播种</th>
+                                    <th data-align='center' data-halign='center' data-field="name">姓名</th>
+                                    <th data-align='center' data-halign='center' data-field="tel">联系电话</th>
+                                    <th data-align='center' data-halign='center' data-field="price">种植面积</th>
+                                    <th data-align='center' data-halign='center' data-field="price">地块编码</th>
+                                    <th data-align='center' data-halign='center' data-field="price">典型地块面积</th>
+                                    <th data-align='center' data-halign='center' data-field="price">地块坐标</th>
+                                    <th data-align='center' data-halign='center' data-field="price">第1季作物名称</th>
+                                    <th data-align='center' data-halign='center' data-field="price">第2季作物名称</th>
+                                    <th data-align='center' data-halign='center' data-field="price">第3季作物名称</th>
                                     <th data-align='center' data-halign='center' data-formatter="buttonFor">
                                         操作
                                     </th>

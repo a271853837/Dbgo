@@ -89,7 +89,7 @@
                     <div class="ibox-content">
                         <div class="row">
                             <div class="col-sm-9">
-                                <div id="container"></div>
+                                <div id="container" style="height:300px;"></div>
                             </div>
                             <div class="col-sm-3">
                                 <ul class="stat-list">
@@ -100,7 +100,7 @@
                                             48% <i class="fa fa-level-up text-navy"></i>
                                         </div>
                                         <div class="progress progress-mini">
-                                            <div style="width: 48%;" class="progress-bar"></div>
+                                            <div style="width: 48%;" class="progress-bar  progress-bar-success"></div>
                                         </div>
                                     </li>
                                     <li>
@@ -110,12 +110,99 @@
                                             60% <i class="fa fa-level-down text-navy"></i>
                                         </div>
                                         <div class="progress progress-mini">
-                                            <div style="width: 60%;" class="progress-bar"></div>
+                                            <div style="width: 60%;" class="progress-bar  progress-bar-success"></div>
                                         </div>
                                     </li>
                                     <li>
                                         <h2 class="no-margins ">360</h2>
                                         <small>总计</small>
+                                        <div class="stat-percent">
+                                            22% <i class="fa fa-bolt text-navy"></i>
+                                        </div>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 22%;" class="progress-bar  progress-bar-success"></div>
+                                        </div>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>种植业省级基本情况（亩）</h5>
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-xs btn-white">2017年</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <div id="container1"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <ul class="stat-list">
+                                    <li>
+                                        <h2 class="no-margins">212314588</h2>
+                                        <small>耕地面积</small>
+                                        <div class="stat-percent">
+                                            48% <i class="fa fa-level-up text-navy"></i>
+                                        </div>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 48%;" class="progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="no-margins ">1512472</h2>
+                                        <small>园地面积</small>
+                                        <div class="stat-percent">
+                                            60% <i class="fa fa-level-down text-navy"></i>
+                                        </div>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 60%;" class="progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="no-margins ">323460</h2>
+                                        <small>果园面积</small>
+                                        <div class="stat-percent">
+                                            22% <i class="fa fa-bolt text-navy"></i>
+                                        </div>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 22%;" class="progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="no-margins ">31606</h2>
+                                        <small>粮食作物播种面积</small>
+                                        <div class="stat-percent">
+                                            22% <i class="fa fa-bolt text-navy"></i>
+                                        </div>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 22%;" class="progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="no-margins ">1234360</h2>
+                                        <small>经济作物播种面积</small>
+                                        <div class="stat-percent">
+                                            22% <i class="fa fa-bolt text-navy"></i>
+                                        </div>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 22%;" class="progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="no-margins ">125360</h2>
+                                        <small>蔬菜瓜果播种面积</small>
                                         <div class="stat-percent">
                                             22% <i class="fa fa-bolt text-navy"></i>
                                         </div>
@@ -142,7 +229,7 @@
         $(function () {
             $('#container').highcharts({
                 credits: {
-                    enabled: false //不显示LOGO 
+                    enabled: false //不显示LOGO
                 },
                 chart: {
                     type: 'column'
@@ -228,6 +315,83 @@
                 }, {
                     name: '总计',
                     data: [13, 8, 13, 9, 14, 14, 15, 15, 6, 10, 13, 14, 13, 15, 16, 12, 17, 13, 14, 12, 4, 13, 12, 15, 10, 9, 17, 4, 11, 7, 2]
+                }]
+            });
+            $('#container1').highcharts({
+                credits: {
+                    enabled: false //不显示LOGO
+                },
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '监测点数量'
+                },
+                xAxis: {
+                    categories: [
+                        '北京',
+                        '天津',
+                        '河北',
+                        '山西',
+                        '内蒙古',
+                        '辽宁',
+                        '吉林',
+                        '黑龙江',
+                        '上海',
+                        '江苏',
+                        '浙江',
+                        '安徽',
+                        '福建',
+                        '江西',
+                        '山东',
+                        '河南',
+                        '湖北',
+                        '湖南',
+                        '广东',
+                        '广西',
+                        '海南',
+                        '重庆',
+                        '四川',
+                        '贵州',
+                        '云南',
+                        '陕西',
+                        '甘肃',
+                        '青海',
+                        '宁夏',
+                        '新疆',
+                        '西藏'
+                    ],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: '（亩）'
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} 亩</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                    name: '耕地面积',
+                    data: [3800629, 1226797, 4388817, 427588, 4960571, 4827453, 518130, 2729599, 4948976, 3440597, 2924541, 3108983, 4221795, 4431180, 4870814, 464803, 803775, 3150671, 2118547, 22635, 3973212, 2874542, 3615106, 4106978, 1023049, 532231, 147605, 4259338, 2399912, 1423494, 3647835]
+                }, {
+                    name: '园地面积',
+                    data: [154315, 76674, 85899, 184011, 168121, 157875, 135124, 164447, 33217, 10921, 62091, 146844, 80451, 92023, 63523, 48031, 122719, 167897, 46724, 77821, 174221, 132405, 96307, 158942, 78533, 6605, 188601, 149562, 99983, 109213, 198523]
+                }, {
+                    name: '果园面积',
+                    data: [733993, 578134, 892168, 756094, 327236, 402452, 530774, 765796, 795849, 767678, 314788, 869267, 212011, 836067, 396012, 470895, 543448, 403378, 392300, 764651, 527700, 326153, 595459, 899521, 544957, 932360, 610872, 797441, 656854, 777692, 530421]
                 }]
             });
         });

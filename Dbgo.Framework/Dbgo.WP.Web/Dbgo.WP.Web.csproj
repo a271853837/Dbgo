@@ -339,6 +339,8 @@
     <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table-mobile.min.js" />
     <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table.min.js" />
     <Content Include="Content\js\plugins\bootstrap-table\bootstrap-table1.9.js" />
+    <Content Include="Content\js\plugins\bootstrap-table\data\typicalInfoData.json" />
+    <Content Include="Content\js\plugins\bootstrap-table\data\userInfoData.json" />
     <None Include="Content\js\plugins\bootstrap-table\data\baseInfoData.json" />
     <Content Include="Content\js\plugins\bootstrap-table\locale\bootstrap-table-zh-CN.min.js" />
     <Content Include="Content\js\plugins\chartJs\Chart.min.js" />
@@ -419,6 +421,16 @@
     <Content Include="Content\js\plugins\layer\skin\layer.css" />
     <Content Include="Content\js\plugins\layer\skin\layer.ext.css" />
     <Content Include="Content\js\plugins\layer\skin\moon\style.css" />
+    <Content Include="Content\js\plugins\layer\theme\default\icon-ext.png" />
+    <Content Include="Content\js\plugins\layer\theme\default\icon.png" />
+    <Content Include="Content\js\plugins\layer\theme\default\layer.css" />
+    <Content Include="Content\js\plugins\layer\theme\default\loading-0.gif" />
+    <Content Include="Content\js\plugins\layer\theme\default\loading-1.gif" />
+    <Content Include="Content\js\plugins\layer\theme\default\loading-2.gif" />
+    <Content Include="Content\js\plugins\layer\theme\extend\layer.ext.js" />
+    <Content Include="Content\js\plugins\layer\theme\skin\layer.css" />
+    <Content Include="Content\js\plugins\layer\theme\skin\layer.ext.css" />
+    <Content Include="Content\js\plugins\layer\theme\skin\moon\style.css" />
     <Content Include="Content\js\plugins\markdown\bootstrap-markdown.js" />
     <Content Include="Content\js\plugins\markdown\bootstrap-markdown.zh.js" />
     <Content Include="Content\js\plugins\markdown\markdown.js" />
@@ -458,10 +470,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Html\DXDK\TypicalDetail.html" />
+    <Content Include="Html\DXDK\TypicalInfo.html" />
     <Content Include="Html\Index.html" />
     <Content Include="Html\Index_v1.html" />
     <Content Include="Html\Login.html" />
     <Content Include="Html\Register.html" />
+    <Content Include="Html\User.html" />
     <Content Include="Html\ZZY\BasicDetail.html" />
     <Content Include="Html\ZZY\BasicInfo.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -534,7 +549,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\js\plugins\layer\theme\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
