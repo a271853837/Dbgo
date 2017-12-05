@@ -5,17 +5,17 @@
     <title></title>
     <meta charset="utf-8" />
     <link href="../../Content/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
-    <link href="/Content/css/animate.min.css" rel="stylesheet">
+    <link href="../../Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../../Content/css/animate.min.css" rel="stylesheet">
     <link href="../../Content/css/style.min.css" rel="stylesheet" />
     <link href="../../Content/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
     <link href="../../Content/css/bootstrap.min.css" rel="stylesheet" />
 
-    <script src="/Content/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../Content/js/jquery.min.js?v=2.1.4"></script>
     <script src="../../Content/js/plugins/bootstrap-table/bootstrap-table1.9.js"></script>
-    <script src="/Content/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
-    <script src="/Content/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
-    <script src="/Content/js/demo/bootstrap-table-demo.min.js"></script>
+    <script src="../../Content/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="../../Content/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../Content/js/demo/bootstrap-table-demo.min.js"></script>
     <script src="../../Content/js/plugins/bootstrap-table/bootstrap-table-export.js"></script>
     <script src="../../Content/js/plugins/layer/layer.min.js"></script>
     <script>
@@ -36,7 +36,8 @@
             //初始化Table
             oTableInit.Init = function () {
                 $('#table').bootstrapTable({
-                    url: '../../Content/js/plugins/bootstrap-table/data/typicalInfoData.json',
+                    // url: '../../../Content/js/plugins/bootstrap-table/data/typicalInfoData.json',
+                    data: data,
                     toolbar: '#toolbar',                //工具按钮用哪个容器
                     striped: true,                      //是否显示行间隔色
                     cache: true,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
@@ -79,13 +80,13 @@
         function detail() {
             //iframe层-多媒体
             layer.open({
-                id:'deatil',
+                id: 'deatil',
                 type: 2,
                 title: "种植业典型地块抽样调查表",
                 area: ['1100px', '700px'],
                 shade: 0.2,
                 shadeClose: true,
-                content: '/Html/DXDK/TypicalDetail.html',
+                content: '../DXDK/TypicalDetail.html',
                 btn: ['打印', '导出', '关闭'],
                 yes: function (index, layero) {
                     var frameId = document.getElementById('deatil').getElementsByTagName("iframe")[0].id;
@@ -110,6 +111,124 @@
                 layer.closeAll('dialog');
             });
         }
+        var data = [
+  {
+      "id": 0,
+      "name": "张国庆",
+      "tel": "15102215131",
+      "price": "0"
+  },
+  {
+      "id": 1,
+      "name": "李川",
+      "tel": "15102215199",
+      "price": "1"
+  },
+  {
+      "id": 2,
+      "name": "王武",
+      "tel": "15102215138",
+      "price": "2"
+  },
+  {
+      "id": 3,
+      "name": "王力宏",
+      "tel": "15102215152",
+      "price": "3"
+  },
+  {
+      "id": 4,
+      "name": "周姐伦",
+      "tel": "15152215131",
+      "price": "4"
+  },
+  {
+      "id": 5,
+      "name": "林俊杰",
+      "tel": "13902215130",
+      "price": "5"
+  },
+  {
+      "id": 6,
+      "name": "连城县",
+      "tel": "13102215135",
+      "price": "6"
+  },
+  {
+      "id": 7,
+      "name": "许心愿",
+      "tel": "1515115136",
+      "price": "7"
+  },
+  {
+      "id": 8,
+      "name": "王哲天",
+      "tel": "15105515134",
+      "price": "8"
+  },
+  {
+      "id": 9,
+      "name": "邢连喜",
+      "tel": "1510221522",
+      "price": "9"
+  },
+  {
+      "id": 10,
+      "name": "贝武娣",
+      "tel": "15102215421",
+      "price": "10"
+  },
+  {
+      "id": 11,
+      "name": "安徽",
+      "price": "11"
+  },
+  {
+      "id": 12,
+      "name": "福建",
+      "price": "12"
+  },
+  {
+      "id": 13,
+      "name": "江西",
+      "price": "13"
+  },
+  {
+      "id": 14,
+      "name": "山东",
+      "price": "14"
+  },
+  {
+      "id": 15,
+      "name": "河南",
+      "price": "15"
+  },
+  {
+      "id": 16,
+      "name": "湖北",
+      "price": "16"
+  },
+  {
+      "id": 17,
+      "name": "湖南",
+      "price": "17"
+  },
+  {
+      "id": 18,
+      "name": "广东",
+      "price": "18"
+  },
+  {
+      "id": 19,
+      "name": "广西",
+      "price": "19"
+  },
+  {
+      "id": 20,
+      "name": "海南",
+      "price": "20"
+  }
+        ];
     </script>
 </head>
 <body class="gray-bg">
