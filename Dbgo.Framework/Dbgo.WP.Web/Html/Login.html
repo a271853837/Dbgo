@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <script src="../Content/js/jquery.min.js"></script>
     <link href="../Content/css/bootstrap.min.css" rel="stylesheet">
     <link href="../Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link href="../Content/css/animate.min.css" rel="stylesheet">
@@ -12,9 +13,36 @@
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
+    <style>
+        .login {
+            background: rgba(255,255,255,.2);
+            border: 1px solid rgba(255,255,255,.3);
+            -moz-box-shadow: 0 3px 0 rgba(12,12,12,.03);
+            -webkit-box-shadow: 0 3px 0 rgba(12,12,12,.03);
+            box-shadow: 0 3px 0 rgba(12,12,12,.03);
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            padding: 30px;
+        }
+    </style>
     <script>
         if (window.top !== window.self) { window.top.location = window.location };
-        
+
+        function login() {
+            window.location.href = 'Index.html'
+            //$.post("http://49.4.7.32/pollsurvey/api/v1/auth/login ", {
+            //    username: $("#username").val(),
+            //    password: $("#password").val(),
+            //    src: "web"
+            //}, function (r) {
+            //    if (r.status==1000) {
+            //        window.location.href='Index.html'
+            //    } else {
+            //        alert(r.msg);
+            //    }
+            //})
+        }
     </script>
 
 </head>
@@ -40,14 +68,14 @@
                 </div>
             </div>
             <div class="col-sm-5">
-                <form method="get" action="/Html/Index.html">
+                <div class="login">
                     <h4 class="no-margins">登录：</h4>
                     <p class="m-t-md">登录到污普项目管理平台</p>
-                    <input type="text" class="form-control uname" placeholder="用户名" />
-                    <input type="password" class="form-control pword m-b" placeholder="密码" />
+                    <input id="username" type="text" class="form-control uname" placeholder="用户名" />
+                    <input id="password" type="password" class="form-control pword m-b" placeholder="密码" />
                     <a href="#">忘记密码了？</a>
-                    <button class="btn btn-success btn-block" >登录</button>
-                </form>
+                    <button class="btn btn-success btn-block" onclick="login()">登录</button>
+                </div>
             </div>
         </div>
         <div class="signup-footer">
